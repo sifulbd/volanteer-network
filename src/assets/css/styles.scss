@@ -1,0 +1,39 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+h2 {
+    font-size: 36px;
+    line-height: 42px;
+}
+.hero-section-separator {
+    padding: 120px 0;
+}
+.section-separator {
+    padding: 80px 0;
+}
+.singleEvent {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    h4 {
+        background-color: red;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin-bottom: 0;
+        padding: 15px 0;
+        border-radius: 0px 0px 4px 4px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 30px;
+    }
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #000000a8;
+    font-weight: 600;
+}
