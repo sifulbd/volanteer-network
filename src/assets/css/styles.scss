@@ -37,3 +37,42 @@ h2 {
     color: #000000a8;
     font-weight: 600;
 }
+.center {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+}
+.login-inner {
+    border: 1px solid #bdbdbd;
+    padding: 80px 30px;
+    h2 {
+        margin-bottom: 30px;
+    }
+    .btn {
+        border-radius: 30px;
+        border: 1px solid #000;
+        position: relative;
+        padding: 8px 0;
+        img {
+            position: absolute;
+            left: 10px;
+            max-height: 24px;
+        }
+    }
+    p {
+        margin-top: 20px;
+        a {
+            color: #3F90FC;
+        }
+    }
+}
+
+.registration-inner  {
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .form-control {
+        margin-bottom: 20px;
+    }
+}

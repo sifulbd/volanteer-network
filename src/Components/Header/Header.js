@@ -33,15 +33,15 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/events">Events</Nav.Link>
-                        <Nav.Link as={Link} to="/donation">Donation</Nav.Link>
-                        <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-                        <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-                        <Nav.Link className="btn btn-primary" style={navBtn} as={Link} to="/login">{ loggedIn.name ? loggedIn.name : loggedIn.email ? loggedIn.email : 'Register' }</Nav.Link>
-                        <Nav.Link className="btn btn-dark" style={navBtn} variant="dark" as={Link} to="/login">Admin</Nav.Link>
-                    </Nav>
+                        <Nav className="ml-auto">
+                            <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/events">Events</Nav.Link>
+                            <Nav.Link as={Link} to="/donation">Donation</Nav.Link>
+                            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+                            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+                            <Nav.Link className="btn btn-primary" style={navBtn} as={Link} to="/login">{ loggedIn.name ? loggedIn.name : loggedIn.email ? loggedIn.email : 'Register' }</Nav.Link>
+                            <Nav.Link className="btn btn-dark" style={navBtn} variant="dark" as={Link} to="/admin">Admin</Nav.Link>
+                        </Nav>
                     </Navbar.Collapse>
                 </div>
             </Navbar>

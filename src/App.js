@@ -16,13 +16,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/styles.scss';
 import Events from './Components/Events/Events';
 import Hero from './Components/Hero/Hero';
-
+import Volanteer from './Components/Volanteer/Volanteer';
+import Admin from './Components/Admin/Admin';
+import "react-datepicker/dist/react-datepicker.css";
 
 
 export const UserContext = createContext();
 
 function App() {
-  const [loggedIn, setLoggedInUser] = useState({isSignedIn: false,
+  const [loggedIn, setLoggedInUser] = useState({
+    isSignedIn: false,
     name: '',
     email: '',
   });
@@ -33,24 +36,30 @@ function App() {
       <div>
         <Switch>
           <Route path={`/destination/:placeId`}>
-
           </Route>
           <Route path="/blog">
-
           </Route>
-          <Route path="/contact">
-            
+          <Route path="/contact">            
           </Route>
           <Route path="/login">
             <Login />
           </Route>
+          <Route path="/admin">
+              <Admin></Admin>
+          </Route>
+
+          <Route path={`/register/:eid`}>
+            <RegisterVolanteer></RegisterVolanteer>
+          </Route>
+
+          <PrivateRoute path={`/volanteer`}> 
+            <Volanteer></Volanteer>           
+          </PrivateRoute>
+
           <Route exect path="/">            
             <Hero></Hero>
             <Events></Events>            
           </Route>
-          <PrivateRoute path="">
-            <RegisterVolanteer></RegisterVolanteer>
-          </PrivateRoute>
           <Route path="*">
             <Notfound></Notfound>
           </Route>
