@@ -16,9 +16,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/styles.scss';
 import Events from './Components/Events/Events';
 import Hero from './Components/Hero/Hero';
-import Volanteer from './Components/Volanteer/Volanteer';
+import Volanteer from './Components/SingleVolanteer/Volanteer';
 import Admin from './Components/Admin/Admin';
 import "react-datepicker/dist/react-datepicker.css";
+import AddNewEvent from './Components/Admin/AddNewEvent';
+import Allvolanteers from './Components/Admin/Allvolanteers';
 
 
 export const UserContext = createContext();
@@ -44,13 +46,21 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/admin">
+          <PrivateRoute path="/admin">
               <Admin></Admin>
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/addevent">
+            <AddNewEvent />
+          </PrivateRoute>       
 
-          <Route path={`/register/:eid`}>
+          <PrivateRoute path={`/volanteers`}> 
+            <Allvolanteers></Allvolanteers>       
+          </PrivateRoute>
+
+          <PrivateRoute path={`/register/:eid`}>
             <RegisterVolanteer></RegisterVolanteer>
-          </Route>
+          </PrivateRoute>
+
 
           <PrivateRoute path={`/volanteer`}> 
             <Volanteer></Volanteer>           

@@ -8,6 +8,7 @@ import { UserContext } from '../../App';
 const Events = () => {
     const [loggedIn, setLoggedInUser] = useContext(UserContext);
     const [events, setEvents] = useState([]);
+    const [data, setData] = useState([]);
 
     const getRandomColor = () => {
         var letters = '0123456789ABCDEF';
@@ -19,10 +20,10 @@ const Events = () => {
     }
 
     useEffect(() => {
-        fetch(`https://fast-depths-45518.herokuapp.com/events?email=${loggedIn.email}`)
+        fetch(`https://tranquil-crag-07102.herokuapp.com/allEvents`)
         .then(res => res.json())
         .then(data => {
-            setEvents(data)
+            setData(data)
         })
     }, [])
 
