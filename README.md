@@ -1,4 +1,4 @@
-# Volanteer Network
+# Volunteers Network
 A non-profit organization web app for managing volanteers.
 <br>
 <br>
